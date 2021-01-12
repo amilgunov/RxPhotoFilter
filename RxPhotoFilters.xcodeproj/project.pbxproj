@@ -13,6 +13,7 @@
 		5B17CC0125AE108A009259BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B17CC0025AE108A009259BC /* Assets.xcassets */; };
 		5B17CC0425AE108A009259BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B17CC0225AE108A009259BC /* LaunchScreen.storyboard */; };
 		5B17CC1025AE15F2009259BC /* PhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B17CC0F25AE15F2009259BC /* PhotosCollectionViewController.swift */; };
+		C4E7DB3D27491D82069318F2 /* Pods_RxPhotoFilters.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88C3BFB75706BFD7D8A305E1 /* Pods_RxPhotoFilters.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		5B17CC0325AE108A009259BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B17CC0525AE108A009259BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B17CC0F25AE15F2009259BC /* PhotosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewController.swift; sourceTree = "<group>"; };
+		88C3BFB75706BFD7D8A305E1 /* Pods_RxPhotoFilters.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxPhotoFilters.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9C42B5176C9A5271D758358 /* Pods-RxPhotoFilters.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxPhotoFilters.release.xcconfig"; path = "Target Support Files/Pods-RxPhotoFilters/Pods-RxPhotoFilters.release.xcconfig"; sourceTree = "<group>"; };
+		BE8315300C8F998A27E290EB /* Pods-RxPhotoFilters.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxPhotoFilters.debug.xcconfig"; path = "Target Support Files/Pods-RxPhotoFilters/Pods-RxPhotoFilters.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4E7DB3D27491D82069318F2 /* Pods_RxPhotoFilters.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		257331D480E8952F5535D711 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BE8315300C8F998A27E290EB /* Pods-RxPhotoFilters.debug.xcconfig */,
+				A9C42B5176C9A5271D758358 /* Pods-RxPhotoFilters.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		5B17CBEB25AE1089009259BC = {
 			isa = PBXGroup;
 			children = (
 				5B17CBF625AE1089009259BC /* RxPhotoFilters */,
 				5B17CBF525AE1089009259BC /* Products */,
+				257331D480E8952F5535D711 /* Pods */,
+				B48E8AA11C6A385201F3DEC9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +84,14 @@
 			path = RxPhotoFilters;
 			sourceTree = "<group>";
 		};
+		B48E8AA11C6A385201F3DEC9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				88C3BFB75706BFD7D8A305E1 /* Pods_RxPhotoFilters.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5B17CC0825AE108A009259BC /* Build configuration list for PBXNativeTarget "RxPhotoFilters" */;
 			buildPhases = (
+				9A3391E9000500FE8F8C647C /* [CP] Check Pods Manifest.lock */,
 				5B17CBF025AE1089009259BC /* Sources */,
 				5B17CBF125AE1089009259BC /* Frameworks */,
 				5B17CBF225AE1089009259BC /* Resources */,
+				F0E5B79CEE0F1D7F65712CDD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9A3391E9000500FE8F8C647C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RxPhotoFilters-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F0E5B79CEE0F1D7F65712CDD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RxPhotoFilters/Pods-RxPhotoFilters-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RxPhotoFilters/Pods-RxPhotoFilters-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RxPhotoFilters/Pods-RxPhotoFilters-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5B17CBF025AE1089009259BC /* Sources */ = {
@@ -283,6 +352,7 @@
 		};
 		5B17CC0925AE108A009259BC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE8315300C8F998A27E290EB /* Pods-RxPhotoFilters.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -303,6 +373,7 @@
 		};
 		5B17CC0A25AE108A009259BC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9C42B5176C9A5271D758358 /* Pods-RxPhotoFilters.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
