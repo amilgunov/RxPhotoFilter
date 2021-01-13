@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,8 @@
 		5B17CC0125AE108A009259BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B17CC0025AE108A009259BC /* Assets.xcassets */; };
 		5B17CC0425AE108A009259BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B17CC0225AE108A009259BC /* LaunchScreen.storyboard */; };
 		5B17CC1025AE15F2009259BC /* PhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B17CC0F25AE15F2009259BC /* PhotosCollectionViewController.swift */; };
+		5BEC436425AED53200D66C22 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEC436325AED53200D66C22 /* PhotoCollectionViewCell.swift */; };
+		5BEC438825AEEAB600D66C22 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEC438725AEEAB600D66C22 /* SceneDelegate.swift */; };
 		C4E7DB3D27491D82069318F2 /* Pods_RxPhotoFilters.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88C3BFB75706BFD7D8A305E1 /* Pods_RxPhotoFilters.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +27,8 @@
 		5B17CC0325AE108A009259BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B17CC0525AE108A009259BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B17CC0F25AE15F2009259BC /* PhotosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewController.swift; sourceTree = "<group>"; };
+		5BEC436325AED53200D66C22 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		5BEC438725AEEAB600D66C22 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = ../../test14.3Scene/test14.3Scene/SceneDelegate.swift; sourceTree = "<group>"; };
 		88C3BFB75706BFD7D8A305E1 /* Pods_RxPhotoFilters.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxPhotoFilters.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9C42B5176C9A5271D758358 /* Pods-RxPhotoFilters.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxPhotoFilters.release.xcconfig"; path = "Target Support Files/Pods-RxPhotoFilters/Pods-RxPhotoFilters.release.xcconfig"; sourceTree = "<group>"; };
 		BE8315300C8F998A27E290EB /* Pods-RxPhotoFilters.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxPhotoFilters.debug.xcconfig"; path = "Target Support Files/Pods-RxPhotoFilters/Pods-RxPhotoFilters.debug.xcconfig"; sourceTree = "<group>"; };
@@ -48,7 +52,6 @@
 				BE8315300C8F998A27E290EB /* Pods-RxPhotoFilters.debug.xcconfig */,
 				A9C42B5176C9A5271D758358 /* Pods-RxPhotoFilters.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -74,8 +77,10 @@
 			isa = PBXGroup;
 			children = (
 				5B17CBF725AE1089009259BC /* AppDelegate.swift */,
+				5BEC438725AEEAB600D66C22 /* SceneDelegate.swift */,
 				5B17CBFB25AE1089009259BC /* ViewController.swift */,
 				5B17CBFD25AE1089009259BC /* Main.storyboard */,
+				5BEC436325AED53200D66C22 /* PhotoCollectionViewCell.swift */,
 				5B17CC0F25AE15F2009259BC /* PhotosCollectionViewController.swift */,
 				5B17CC0025AE108A009259BC /* Assets.xcassets */,
 				5B17CC0225AE108A009259BC /* LaunchScreen.storyboard */,
@@ -206,7 +211,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BEC438825AEEAB600D66C22 /* SceneDelegate.swift in Sources */,
 				5B17CC1025AE15F2009259BC /* PhotosCollectionViewController.swift in Sources */,
+				5BEC436425AED53200D66C22 /* PhotoCollectionViewCell.swift in Sources */,
 				5B17CBFC25AE1089009259BC /* ViewController.swift in Sources */,
 				5B17CBF825AE1089009259BC /* AppDelegate.swift in Sources */,
 			);

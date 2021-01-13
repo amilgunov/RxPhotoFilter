@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aLk-fI-aHe">
-    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -15,11 +15,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RxPhotoFilters" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zdy-zw-9Tc">
-                                <rect key="frame" x="0.0" y="44" width="414" height="552"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="672"/>
                             </imageView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KUL-RB-9Nk">
                                 <rect key="frame" x="155" y="648" width="105" height="30"/>
@@ -44,10 +44,13 @@
                     <navigationItem key="navigationItem" title="Camera filter" id="850-LO-cMb">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="d2W-SV-Zaw">
                             <connections>
-                                <segue destination="PdU-0t-URt" kind="presentation" id="cGP-9a-E64"/>
+                                <segue destination="PdU-0t-URt" kind="presentation" modalPresentationStyle="fullScreen" id="cGP-9a-E64"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="Zdy-zw-9Tc" id="RFU-dM-XDZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -56,25 +59,40 @@
         <!--Photos Collection View Controller-->
         <scene sceneID="guH-Lo-mVx">
             <objects>
-                <collectionViewController id="xdr-Xz-nqv" customClass="PhotosCollectionViewController" customModule="RxPhotoFilters" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="ff" id="xdr-Xz-nqv" customClass="PhotosCollectionViewController" customModule="RxPhotoFilters" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="leA-Xd-HCa">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="oiQ-Lx-MUG">
-                            <size key="itemSize" width="128" height="128"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="oiQ-Lx-MUG">
+                            <size key="itemSize" width="100" height="100"/>
+                            <size key="estimatedItemSize" width="100" height="100"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="lu9-E6-UFc">
-                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCollectionViewCell" id="lu9-E6-UFc" customClass="PhotoCollectionViewCell" customModule="RxPhotoFilters" customModuleProvider="target">
+                                <rect key="frame" x="10" y="10" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Vsf-dB-7NC">
-                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9fe-r2-mkc">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="9fe-r2-mkc" firstAttribute="centerX" secondItem="Vsf-dB-7NC" secondAttribute="centerX" id="7a1-yt-mmv"/>
+                                        <constraint firstItem="9fe-r2-mkc" firstAttribute="top" secondItem="Vsf-dB-7NC" secondAttribute="top" id="WUM-tZ-YFg"/>
+                                        <constraint firstItem="9fe-r2-mkc" firstAttribute="leading" secondItem="Vsf-dB-7NC" secondAttribute="leading" id="jKu-Hw-IbE"/>
+                                        <constraint firstItem="9fe-r2-mkc" firstAttribute="centerY" secondItem="Vsf-dB-7NC" secondAttribute="centerY" id="wMo-66-n2t"/>
+                                    </constraints>
                                 </collectionViewCellContentView>
+                                <connections>
+                                    <outlet property="photoImageView" destination="9fe-r2-mkc" id="7d9-iS-w4u"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -86,7 +104,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8eZ-IZ-9aS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2704.347826086957" y="93.75"/>
+            <point key="canvasLocation" x="2704.347826086957" y="93.750000000000014"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="UIz-2u-d8l">
@@ -94,7 +112,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aLk-fI-aHe" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="HaS-jt-jlB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -112,7 +130,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PdU-0t-URt" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="FgE-2J-41Z">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
