@@ -10,6 +10,8 @@ import RxSwift
 
 class ViewController: UIViewController {
     
+    private let disposeBag = DisposeBag()
+    
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var applyFilterButton: UIButton!
     
@@ -17,16 +19,15 @@ class ViewController: UIViewController {
         
         guard let sourseImage = self.imageView.image else { return }
         
-        FilterService().applyfilter(to: sourseImage) { image in
-            DispatchQueue.main.async {
-                self.imageView.image = image
-            }
-        }
+        FilterService().applyFilter(to: sourseImage)
+            .subscribe(onNext: { filteredImage in
+                DispatchQueue.main.async {
+                    self.imageView.image = filteredImage
+                }
+            }).disposed(by: disposeBag)
         
     }
-    
-    private let disposeBag = DisposeBag()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
