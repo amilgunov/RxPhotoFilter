@@ -11,6 +11,7 @@ import RxSwift
 class ViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var applyFilterButton: UIButton!
     
     private let disposeBag = DisposeBag()
     
@@ -25,11 +26,19 @@ class ViewController: UIViewController {
         guard let navController = segue.destination as? UINavigationController, let photoVC = navController.viewControllers.first as? PhotosCollectionViewController else { fatalError("Destination controller is not found") }
         
         photoVC.selectedPhoto.subscribe(onNext: { [weak self] photo in
-            self?.imageView.image = photo
+            
+            DispatchQueue.main.async {
+                self?.updateUI(with: photo)
+            }
+            
         }).disposed(by: disposeBag)
 
     }
 
-
+    private func updateUI(with image: UIImage) {
+        self.imageView.image = image
+        self.applyFilterButton.isHidden = false
+    }
+    
 }
 
