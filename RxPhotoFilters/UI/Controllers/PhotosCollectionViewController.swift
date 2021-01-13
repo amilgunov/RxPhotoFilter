@@ -81,11 +81,7 @@ class PhotosCollectionViewController: UICollectionViewController {
                 DispatchQueue.main.async {
                     self?.collectionView.reloadData()
                 }
-                
-                
             }
         }
-        
     }
-    
 }

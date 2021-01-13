@@ -17,7 +17,7 @@ class FilterService {
         
         return Observable<UIImage>.create { observer in
             
-            self.applyfilter(to: inputImage) { fImage in
+            self.filterImage(to: inputImage) { fImage in
                 observer.onNext(fImage)
             }
             
@@ -25,7 +25,7 @@ class FilterService {
         }
     }
     
-    private func applyfilter(to inputImage: UIImage, completion: @escaping ((UIImage) -> ())) {
+    private func filterImage(to inputImage: UIImage, completion: @escaping ((UIImage) -> ())) {
         
         guard let filter = CIFilter(name: "CICMYKHalftone") else { return }
         filter.setValue(5.0, forKey: kCIInputWidthKey)
