@@ -13,6 +13,18 @@ class ViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var applyFilterButton: UIButton!
     
+    @IBAction func applyFilterButtonPressed(_ sender: Any) {
+        
+        guard let sourseImage = self.imageView.image else { return }
+        
+        FilterService().applyfilter(to: sourseImage) { image in
+            DispatchQueue.main.async {
+                self.imageView.image = image
+            }
+        }
+        
+    }
+    
     private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {

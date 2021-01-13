@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B081DB625AEFBA500D381D1 /* FilterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B081DB525AEFBA500D381D1 /* FilterService.swift */; };
 		5B17CBF825AE1089009259BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B17CBF725AE1089009259BC /* AppDelegate.swift */; };
 		5B17CBFC25AE1089009259BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B17CBFB25AE1089009259BC /* ViewController.swift */; };
 		5B17CBFF25AE1089009259BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B17CBFD25AE1089009259BC /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B081DB525AEFBA500D381D1 /* FilterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterService.swift; sourceTree = "<group>"; };
 		5B17CBF425AE1089009259BC /* RxPhotoFilters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxPhotoFilters.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B17CBF725AE1089009259BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B17CBFB25AE1089009259BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				5B17CBF725AE1089009259BC /* AppDelegate.swift */,
 				5BEC438725AEEAB600D66C22 /* SceneDelegate.swift */,
 				5B17CBFB25AE1089009259BC /* ViewController.swift */,
+				5B081DB525AEFBA500D381D1 /* FilterService.swift */,
 				5B17CBFD25AE1089009259BC /* Main.storyboard */,
 				5BEC436325AED53200D66C22 /* PhotoCollectionViewCell.swift */,
 				5B17CC0F25AE15F2009259BC /* PhotosCollectionViewController.swift */,
@@ -214,6 +217,7 @@
 				5BEC438825AEEAB600D66C22 /* SceneDelegate.swift in Sources */,
 				5B17CC1025AE15F2009259BC /* PhotosCollectionViewController.swift in Sources */,
 				5BEC436425AED53200D66C22 /* PhotoCollectionViewCell.swift in Sources */,
+				5B081DB625AEFBA500D381D1 /* FilterService.swift in Sources */,
 				5B17CBFC25AE1089009259BC /* ViewController.swift in Sources */,
 				5B17CBF825AE1089009259BC /* AppDelegate.swift in Sources */,
 			);

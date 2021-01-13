@@ -30,6 +30,9 @@
                                 <state key="normal" title="Apply filter">
                                     <color key="titleColor" red="0.90399616959999995" green="0.96470361950000005" blue="0.96078175310000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <action selector="applyFilterButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a6E-7t-W8E"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
