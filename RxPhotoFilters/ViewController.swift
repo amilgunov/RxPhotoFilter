@@ -12,6 +12,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
     
+    private let disposeBag = DisposeBag()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -19,11 +21,12 @@ class ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let dest = segue.destination as? UINavigationController, let vc = dest.viewControllers.first as? PhotosCollectionViewController else { return }
         
-        _ = vc.selectedPhoto.subscribe { image in
-            self.imageView.image = image
-        }.disposed(by: vc.disposeBag)
+        guard let navController = segue.destination as? UINavigationController, let photoVC = navController.viewControllers.first as? PhotosCollectionViewController else { fatalError("Destination controller is not found") }
+        
+        photoVC.selectedPhoto.subscribe(onNext: { [weak self] photo in
+            self?.imageView.image = photo
+        }).disposed(by: disposeBag)
 
     }
 

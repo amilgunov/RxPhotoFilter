@@ -15,7 +15,6 @@ class PhotosCollectionViewController: UICollectionViewController {
     var selectedPhoto: Observable<UIImage> {
         return selectedPhotoSubject.asObservable()
     }
-    let disposeBag = DisposeBag()
     
     private var images = [PHAsset]()
     
